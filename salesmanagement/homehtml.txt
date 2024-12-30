@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management System</title>
+    <link rel="stylesheet" href="homestyles.css">
+</head>
+<body>
+    <!-- Drawer Toggle Button -->
+    <button class="drawer-toggle" onclick="toggleDrawer()">☰</button>
+
+    <!-- Drawer Navigation -->
+    <div class="drawer" id="drawer">
+        <div class="drawer-spacer"></div> <!-- Add spacer for the menu button -->
+        <nav>
+            <a href="#my-account">My Account</a>
+            <a href="#sales-order">Sales Order Processing</a>
+            <a href="#tracking">Tracking & Reporting</a>
+            <a href="#input">Input Data</a>
+            <a href="#output">Output Data</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>Sales Management System</h1>
+        </header>
+
+        <div class="container">
+            <!-- My Account Section -->
+            <section class="section" id="my-account">
+                <h2>Account Management</h2>
+                <p>Allow users to register and log in to become members.</p>
+                <button class="button">Login</button>
+                <button class="button">Sign Up</button>
+            </section>
+
+            <!-- Sales Order Section -->
+            <section class="section" id="sales-order">
+                <h2>Sales Order Processing</h2>
+                <p>Manage customer interactions, order entry, payment processing, and fulfillment.</p>
+                <form>
+                    <div class="form-group">
+                        <label for="customer-name">Customer Name:</label>
+                        <input type="text" id="customer-name" class="input-field" placeholder="Enter customer name">
+                    </div>
+                    <div class="form-group">
+                        <label for="order-details">Order Details:</label>
+                        <textarea id="order-details" class="input-field" placeholder="Enter order details"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" class="input-field">
+                            <option value="cash">Cash</option>
+                            <option value="card">Card</option>
+                            <option value="online">Online Payment</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="button">Submit Order</button>
+                </form>
+            </section>
+
+            <!-- Tracking Section -->
+            <section class="section" id="tracking">
+                <h2>Tracking & Reporting</h2>
+                <p>Keep track of sales transactions, inventory updates, and customer trends.</p>
+                <button class="button">View Reports</button>
+            </section>
+
+            <!-- Input Data Section -->
+            <section class="section" id="input">
+                <h2>Input Data</h2>
+                <p>Manage customer details, order data, payment information, and inventory data.</p>
+                <button class="button">Update Data</button>
+            </section>
+
+            <!-- Output Data Section -->
+            <section class="section" id="output">
+                <h2>Output Data</h2>
+                <p>Generate receipts, sales reports, inventory updates, and financial records.</p>
+                <button class="button">Generate Report</button>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Sales Management System. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="homescreen.js"></script>
+</body>
+</html>

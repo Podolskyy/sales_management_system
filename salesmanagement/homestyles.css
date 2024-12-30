@@ -1,0 +1,127 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #ffffff;
+    color: #3b7a57;
+}
+
+/* Header */
+header {
+    background-color: #3b7a57;
+    color: #ff3829;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 3px solid #3b7a57;
+    letter-spacing: 2px;
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #ffffff;
+    color: #3b7a57;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 1rem;
+    border-right: 3px solid #d42b1e;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-spacer {
+    height: 50px;
+}
+
+.drawer nav a {
+    display: block;
+    color: #3b7a57;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.drawer nav a:hover {
+    background-color: #f5f5f5;
+    color: #d42b1e;
+}
+
+/* Drawer Toggle Button */
+.drawer-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d42b1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-toggle:hover {
+    background-color: #3b7a57;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.drawer-open {
+    margin-left: 250px;
+}
+
+/* Sections */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.section {
+    background: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px dashed #3b7a57;
+}
+
+.section h2 {
+    color: #d42b1e;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background: #ffffff;
+    color: #3b7a57;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #3b7a57;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}

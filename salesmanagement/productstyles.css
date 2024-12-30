@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White for a clean bakery feel */
+    color: #3b7a57; /* Krispy Kreme Green */
+}
+
+header {
+    background-color: #ffffff; /* White background */
+    color: #d42b1e; /* Krispy Kreme Red */
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #3b7a57;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px 20px;
+    background-color: #3b7a57; /* Krispy Kreme Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #2e5d4e; /* Darker Krispy Kreme Green */
+    transform: translateY(-2px);
+}
+
+.back-button:active {
+    background-color: #23493e; /* Even darker green */
+    transform: translateY(0);
+}
+
+/* Snackbar for Refresh */
+.snackbar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.refresh-button img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.refresh-button img:hover {
+    transform: rotate(360deg);
+}
+
+/* Container and Sections */
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff; /* White for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #d42b1e; /* Krispy Kreme Red border */
+}
+
+section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #d42b1e; /* Krispy Kreme Red */
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e5e5; /* Light gray */
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    border-color: #3b7a57; /* Krispy Kreme Green */
+    outline: none;
+    box-shadow: 0 0 4px rgba(59, 122, 87, 0.5);
+}
+
+/* Product List */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.product-item {
+    background-color: #f9f9fb;
+    padding: 1rem;
+    border: 2px solid #3b7a57; /* Krispy Kreme Green border */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.product-item h3 {
+    font-size: 1.2rem;
+    color: #3b7a57; /* Krispy Kreme Green */
+    margin-bottom: 0.5rem;
+}
+
+.product-item p {
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+/* Search Message */
+.message {
+    color: #d42b1e; /* Krispy Kreme Red */
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    height: 100%;
+    background: #3b7a57; /* Krispy Kreme Green */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 4px solid #d42b1e; /* Krispy Kreme Red border */
+}

@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff7e8; /* Soft cream background */
+    color: #333;
+}
+
+header {
+    background-color: #c81e3c; /* Krispy Kreme red */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 10px 20px;
+    background-color: #c81e3c; /* Krispy Kreme red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background-color: #a81630; /* Darker red for hover */
+    transform: translateY(-2px);
+}
+
+.back-button:active {
+    background-color: #86121e; /* Even darker red for active state */
+    transform: translateY(0);
+}
+
+/* Snackbar for Refresh */
+.snackbar {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.refresh-button img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease;
+}
+
+.refresh-button img:hover {
+    transform: rotate(360deg);
+}
+
+/* Container and Sections */
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff; /* White content background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #c81e3c; /* Krispy Kreme red */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    border-color: #c81e3c; /* Krispy Kreme red focus */
+    outline: none;
+    box-shadow: 0 0 4px rgba(200, 30, 60, 0.5);
+}
+
+.button {
+    width: 100%;
+    background-color: #c81e3c; /* Krispy Kreme red */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #a81630; /* Darker red */
+    transform: translateY(-2px);
+}
+
+.button:active {
+    background-color: #86121e;
+    transform: translateY(0);
+}
+
+/* Promotion List */
+.promotion-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.promotion-item {
+    background-color: #fff7e8; /* Soft cream background */
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.promotion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.promotion-item h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.promotion-item p {
+    margin: 0.3rem 0;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Search Message */
+.message {
+    color: #c81e3c; /* Red message for errors or feedback */
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #3b8f45; /* Krispy Kreme green */
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
