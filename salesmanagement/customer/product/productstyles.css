@@ -1,0 +1,450 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff7e8; /* Soft cream background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #d42b1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fab-add-to-cart {
+    position: fixed;
+    top: 20px; /* Position: Top-left */
+    right: 20px;
+    background-color: #d42b1e; /* Krispy Kreme red */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 60px; /* Button size */
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.fab-add-to-cart:hover {
+    background-color: #3b7a57; /* Krispy Kreme green */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.fab-icon {
+    width: 50%; /* Icon size relative to the button */
+    height: 50%;
+    object-fit: contain;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Modal Header */
+.modal-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.8rem;
+    color: #ffcc00; /* Bright yellow */
+}
+
+/* Modal Input */
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Modal Buttons */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-btn {
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Confirm Button */
+.modal-btn.confirm {
+    background-color: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff;
+}
+
+.modal-btn.confirm:hover {
+    background-color: #2a5e40;
+}
+
+/* Cancel Button */
+.modal-btn.cancel {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    color: #ffffff;
+}
+
+.modal-btn.cancel:hover {
+    background-color: #a71d14;
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff7e8;
+    color: #3b7a57;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 1rem;
+    border-right: 3px solid #d42b1e;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-spacer {
+    height: 50px;
+}
+
+.drawer nav a {
+    display: block;
+    color: #3b7a57;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.drawer nav a:hover {
+    background-color: #f5f5f5;
+    color: #d42b1e;
+}
+
+/* Drawer Toggle Button */
+.drawer-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d42b1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-toggle:hover {
+    background-color: #3b7a57;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+nav a:hover {
+    color: #fef5e7;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#search-input {
+    flex: 1;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #3b7a57; /* Krispy Kreme green */
+    border-radius: 50px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search-input:focus {
+    border-color: #d42b1e; /* Krispy Kreme red */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3b7a57; /* Krispy Kreme green */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#search-button:hover {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    transform: scale(1.05);
+}
+
+.add-to-cart {
+    background-color: #ffcc00; /* Bright yellow */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #ff9900; /* Darker yellow */
+}
+
+/* General Button Styles */
+.action-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    background-color: #3b7a57; /* Krispy Kreme green */
+    border: none;
+    border-radius: 30px; /* Rounded buttons */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Hover Effect for Buttons */
+.action-button:hover {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    transform: translateY(-3px); /* Lift button slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Active Effect */
+.action-button:active {
+    transform: translateY(0); /* Push button down slightly */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Styles for "Buy Now" Button */
+.action-button.buy-now {
+    background-color: #3b7a57; /* Krispy Kreme green */
+}
+
+/* Specific Styles for "View Details" Button */
+.action-button.view-details {
+    background-color: #d42b1e; /* Krispy Kreme red */
+}
+
+/* Button Alignment */
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    gap: 15px;
+}
+
+.tab {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3b7a57; /* Krispy Kreme green */
+    border: 2px solid #3b7a57;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.tab.active {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    transform: scale(1.1);
+}
+
+.tab:hover {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    transform: scale(1.05);
+}
+
+/* Orders Container */
+.orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Product Cards */
+.order-card {
+    background-color: white;
+    border: 3px solid #3b7a57; /* Krispy Kreme green */
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.additional-details {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333; /* Dark gray for readability */
+}
+
+.additional-details strong {
+    color: #3b7a57; /* Krispy Kreme green */
+    font-weight: bold;
+}
+
+.additional-details p {
+    margin: 5px 0;
+}
+
+/* Product Details */
+.product-details {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3b7a57; /* Krispy Kreme green */
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d42b1e; /* Krispy Kreme red */
+}
+
+.product-stock {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.product-ingredients,
+.product-nutrition {
+    font-size: 0.9rem;
+    color: #333; /* Dark gray for readability */
+    margin-top: 5px;
+}
+.product-ingredients strong,
+.product-nutrition strong {
+    color: #3b7a57; /* Krispy Kreme green */
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    background: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #ffffff; /* White border for consistency */
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Footer Links */
+footer a {
+    color: #ffed4c; /* Krispy Kreme red for links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+    text-shadow: 0px 0px 5px #ff3829; /* Subtle glow effect */
+}
+
+/* Footer Text */
+footer p {
+    margin: 0.5rem 0;
+    font-family: 'Roboto', sans-serif;
+}

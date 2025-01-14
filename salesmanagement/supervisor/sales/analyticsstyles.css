@@ -1,0 +1,176 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff7e8; /* Krispy Kreme cream background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #d42b1e; /* Krispy Kreme red */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Drawer Styles */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #fff7e8;
+    color: #3b7a57;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding-top: 1rem;
+    border-right: 3px solid #d42b1e;
+}
+
+.drawer.open {
+    transform: translateX(0);
+}
+
+.drawer-spacer {
+    height: 50px;
+}
+
+.drawer nav a {
+    display: block;
+    color: #3b7a57;
+    text-decoration: none;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.drawer nav a:hover {
+    background-color: #f5f5f5;
+    color: #d42b1e;
+}
+
+/* Drawer Toggle Button */
+.drawer-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    background-color: #d42b1e;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.drawer-toggle:hover {
+    background-color: #3b7a57;
+}
+
+/* Table Styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Quantity Form */
+.quantity-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Buttons */
+.update-btn, .remove-btn, .clear-btn, .checkout-btn {
+    background-color: #d42b1e; /* Krispy Kreme red */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.update-btn:hover, .remove-btn:hover, .clear-btn:hover, .checkout-btn:hover {
+    background-color: #3b7a57; /* Krispy Kreme green */
+}
+
+/* Footer Section */
+footer {
+    background: #3b7a57; /* Krispy Kreme green */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 3px solid #ffffff; /* White border for consistency */
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Footer Links */
+footer a {
+    color: #ffed4c; /* Krispy Kreme red for links */
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff; /* White on hover */
+    text-shadow: 0px 0px 5px #ff3829; /* Subtle glow effect */
+}
+
+/* Footer Text */
+footer p {
+    margin: 0.5rem 0;
+    font-family: 'Roboto', sans-serif;
+}
