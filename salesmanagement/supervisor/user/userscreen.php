@@ -30,8 +30,7 @@ $result = mysqli_query($conn, $query);
             <a href="../main/supervisorscreen.php">My Account</a>
             <a href="../user/userscreen.php">Manage Users</a>
             <a href="../purchase/purchasescreen.php">Manage Orders</a>
-            <a href="../inventory/inventoriescreen.php">Manage Stock</a>
-            <a href="../report/reportscreen.php">View Reports</a>
+            <a href="../sales/sales_analytic.php">View Reports</a>
             <a href="../../home/accountscreen.php">Logout</a>
         </nav>
     </div>

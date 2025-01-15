@@ -4,6 +4,7 @@ if (isset($_SESSION['user_id'])) {
     $userId = $_SESSION['user_id']; // Access the user_id stored in the session
 } else {
     // Handle case where the user is not logged in
+    header('Location: ../../home/accountscreen.php');
     echo "You are not logged in.";
 }
 

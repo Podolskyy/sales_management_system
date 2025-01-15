@@ -11,23 +11,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user_confirmpassword = mysqli_real_escape_string($conn, $_POST['signup-confirmpassword']);
     $user_address = mysqli_real_escape_string($conn, $_POST['signup-address']);
 
-    // Check if passwords match
-    if ($user_password !== $user_confirmpassword) {
-        echo "Passwords do not match.";
+    // Check if email already exists
+    $email_check_query = "SELECT * FROM users WHERE user_email = '$user_email'";
+    $email_check_result = mysqli_query($conn, $email_check_query);
+
+    if (mysqli_num_rows($email_check_result) > 0) {
+        $error_message = "This email is already registered. Please use a different email.";
     } else {
-        // Hash the password using bcrypt
-        $hashed_password = password_hash($user_password, PASSWORD_BCRYPT);
-
-        // Insert data into database
-        $query = "INSERT INTO users (user_name, user_email, user_password, user_address, user_type) 
-                  VALUES ('$user_name', '$user_email', '$hashed_password', '$user_address', 'Customer')";
-
-        if (mysqli_query($conn, $query)) {
-            echo "Registration successful!";
-            // Optionally, redirect to a login page or home
-            header("Location: homescreen.php");
+        // Check if passwords match
+        if ($user_password !== $user_confirmpassword) {
+            $error_message = "Passwords do not match.";
         } else {
-            echo "Error: " . mysqli_error($conn);
+            // Hash the password using bcrypt
+            $hashed_password = password_hash($user_password, PASSWORD_BCRYPT);
+
+            // Insert data into database
+            $query = "INSERT INTO users (user_name, user_email, user_password, user_address, user_type) 
+                      VALUES ('$user_name', '$user_email', '$hashed_password', '$user_address', 'Customer')";
+
+            if (mysqli_query($conn, $query)) {
+                // Optionally, redirect to a login page or home
+                header("Location: homescreen.php");
+                exit(); // Stop further script execution
+            } else {
+                $error_message = "Error: " . mysqli_error($conn);
+            }
         }
     }
 }
@@ -72,6 +80,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- Registration Section -->
         <section id="signup" class="section">
             <h2>Create Your Account</h2>
+            <?php if (isset($error_message)): ?>
+                <p class="error-message"><?php echo $error_message; ?></p>
+            <?php endif; ?>
             <form method="POST">
                 <div class="form-group">
                     <label for="signup-name">Name:</label>
@@ -79,7 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
                 <div class="form-group">
                     <label for="signup-address">Address:</label>
-                    <input type="text" id="signup-address" name="signup-address" class="input-field" placeholder="Enter your name" required>
+                    <input type="text" id="signup-address" name="signup-address" class="input-field" placeholder="Enter your address" required>
                 </div>
                 <div class="form-group">
                     <label for="signup-email">Email:</label>

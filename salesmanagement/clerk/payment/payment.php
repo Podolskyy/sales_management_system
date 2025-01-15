@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ) {
         $paymentMethod = $_POST['payment_method'];  // Payment method from form
         $purchaseType = $_POST['purchase_type'];    // Purchase type from form
-        $status = 'Preparing';
+        $status = 'Fulfilled';
 
         // Step 2: Insert the order into the `orders` table
         $orderQuery = "INSERT INTO orders (user_id, total_price, status, payment_method, type) 

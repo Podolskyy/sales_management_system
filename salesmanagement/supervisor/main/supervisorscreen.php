@@ -21,7 +21,6 @@
             <li><a href="supervisorscreen.php">My Account</a></li>
             <li><a href="../user/userscreen.php">Manage Users</a></li>
             <li><a href="../purchase/purchasescreen.php">Manage Orders</a></li>
-            <li><a href="../inventory/inventoriescreen.php">Manage Stock</a></li>
             <li><a href="../sales/sales_analytic.php">View Reports</a></li>
             <li><a href="../../home/accountscreen.php">Logout</a></li>
         </ul>

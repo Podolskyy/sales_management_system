@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+// Implementing Session Fixation Protection
+// Regenerate session ID to prevent session fixation attacks
+if (isset($_SESSION['user_id'])) {
+    session_regenerate_id(true); // Regenerate session ID to prevent session fixation
+    $userId = $_SESSION['user_id']; // Access the user_id stored in the session
+} else {
+    // Handle case where the user is not logged in
+    header('Location: ../../home/accountscreen.php');
+    exit(); // Make sure no further code is executed
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
